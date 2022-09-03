@@ -12,9 +12,11 @@ class EjercicioResuelto7 {
 
         if (A > B) {
             System.out.println("\nA es mayor que B.");
-        } else if (A == B) {
+        }
+        else if (A == B) {
             System.out.println("\nA es igual a B.");
-        } else {
+        }
+        else {
             System.out.println("\nA es menor que B.");
         }
     }
