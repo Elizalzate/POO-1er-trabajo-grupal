@@ -1,37 +1,37 @@
-
-
-import java.util.Scanner;//importar paquete para ingresar datos por teclado
+import java.util.*;
 public class EjercicioResuelto12 {
-	public static void main(String[] args){//programa principal
-	String nom; //variable nombre
-	double vhn,het,hee8,salario;//variables valor hora normal,horas extras trabajadas,horas extras excedentes a 8, salario.
-	int nht;//variable numero de horas trabajadas
-	Scanner entrada= new Scanner(System.in);//se coloca System.in porque son datos de entrada
-	System.out.println("Ingrese nombre: ");//mensaje para pedir variable nom
-	nom= entrada.nextLine();//se asigna a nom el dato ingresado anteriormente de tipo String (por eso el nextLine)
-	System.out.println("Ingrese número de horas trabajadas: ");         //mensaje para pedir numero de horas trabajadas
-	nht=entrada.nextInt();//se asigna a nht el dato ingresado anteriormente de tipo entero (por eso el nextInt)
-	System.out.println("Ingrese el salario por hora normal trabajada: ");  //mensaje para pedir variable salario por hora
-	vhn=entrada.nextDouble();//se asigna a vhn el dato ingresado anteriormente de tipo entero (por eso el nextInt)
-	
-	
-	if(nht>40) {  //compara las horas trabajadas con el limite estipulado
-		het=nht-40;  //calcula horas extras
-		if (het>8) { // //compara las horas extras con el limite estipulado
-			hee8=het-8;         //calcula horas extras que excedan las 8.
-			salario=40*vhn+16*vhn+hee8*3*vhn; //calcula salario
-			
-		}
-		else {
-			salario=40*vhn+het-2*vhn;//calcula salario
-		}
-	}
-	else {
-		salario=nht*vhn;//calcula salario
-		
-		
-	}
-	System.out.println("El trabajador "+nom+" devengó: $"+salario );//muestra resultado
-	}
-	}
+    public static void main(String[] args) {
+        System.out.println("""
+                Determinar la cantidad de dinero recibida por un trabajador por concepto de las horas\s
+                semanales trabajadas en una empresa, sabiendo que cuando las horas de trabajo exceden\s
+                de 40, el resto se considera horas extras y se pagan al doble de una hora normal, cuando\s
+                no exceden de 8; si las horas extras exceden de 8, se pagan las primeras 8 al doble de lo\s
+                que se paga una hora normal y el resto al triple.\s
+                """);
+        String nombre;
+        double valorHora, horasExtrasTrabajadas, horasExtrasExcedentes, salario, horasTrabajadas;
+        Scanner entrada = new Scanner(System.in);
+        System.out.println("Ingrese nombre: ");
+        nombre = entrada.nextLine();
+        System.out.println("Ingrese número de horas trabajadas: ");
+        horasTrabajadas = entrada.nextInt();
+        System.out.println("Ingrese el salario por hora trabajada: ");
+        valorHora = entrada.nextDouble();
+
+        if (horasTrabajadas > 40) {
+            horasExtrasTrabajadas = horasTrabajadas - 40;
+            if (horasExtrasTrabajadas > 8) {
+                horasExtrasExcedentes = horasExtrasTrabajadas - 8;
+                salario = (40 * valorHora) + (8 * valorHora * 2) + (horasExtrasExcedentes * 3 * valorHora);
+            }
+            else {
+                salario = (40 * valorHora) + (horasExtrasTrabajadas * 2 * valorHora);
+            }
+        }
+        else {
+            salario = horasTrabajadas * valorHora;
+        }
+        System.out.println("El trabajador " + nombre + " devengó: $" + salario);
+    }
+}
 
