@@ -1,47 +1,53 @@
-
-
-import java.util.Scanner;//importar paquete para ingresar datos por teclado
+import java.util.*;
 
 public class EjercicioResuelto14 {
-	public static void main(String[] args){//programa principal
-		int vd1,vd2,vd3,totven;//variables ventas de los departamentos 1,2,3 y total de ventas.
-		double salar,porven,salar1,salar2,salar3;//variables salarios de empleados,porcentaje de ventas, salario1,salario2,salario3;
-		Scanner entrada= new Scanner(System.in);//se coloca System.in porque son datos de entrada
-		System.out.println("Ingrese ventas del departamento 1: ");//mensaje para pedir ventas del departamento 1
-		vd1=entrada.nextInt();//se asigna a vd1 el dato ingresado anteriormente de tipo entero (por eso el nextInt)
-		System.out.println("Ingrese ventas del departamento 2: ");//mensaje para pedir ventas del departamento 2
-		vd2=entrada.nextInt();//se asigna a vd2 el dato ingresado anteriormente de tipo entero (por eso el nextInt)
-		System.out.println("Ingrese ventas del departamento 3: ");//mensaje para pedir ventas del departamento 3
-		vd3=entrada.nextInt();//se asigna a vd3 el dato ingresado anteriormente de tipo entero (por eso el nextInt)
-		System.out.println("Ingrese el salario de los vendedores: ");//mensaje para pedir salario de los vendedores
-		salar=entrada.nextDouble();//se asigna a saalar el dato ingresado anteriormente de tipo double (por eso el nextDouble)
-		
-		totven=vd1+vd2+vd3;  //calcula el total de ventas
-		porven=0.33*totven;  //calcula el porcentaje sobre las ventas totales 
-		if (vd1>porven) { //verifica si las ventas del departamento son mayores al porcentaje de ventas totales
-			salar1=salar+0.2*salar; //calcula salario del departamento
-			
-		}
-		else {
-			salar1=salar;    
-		}
-		if (vd2>porven) {    //verifica si las ventas del departamento son mayores al porcentaje de ventas totales
-			salar2=salar+0.2*salar;//calcula salario del departamento
-			
-		}
-		else {
-			salar2=salar;	
-	}
-		if (vd3>porven) {//verifica si las ventas del departamento son mayores al porcentaje de ventas totales
-			salar3=salar+0.2*salar;//calcula salario del departamento
-			
-		}
-		else {
-			salar3=salar;	
-	}
-		System.out.println("El salario para los vendedores del departamento 1 es: "+salar1);//muestra resultado
-		System.out.println("El salario para los vendedores del departamento 2 es: "+salar2);//muestra resultado
-		System.out.println("El salario para los vendedores del departamento 3 es: "+salar3);//muestra resultado
+    public static void main(String[] args) {
+        System.out.println("""
+                Una empresa con tres departamentos tiene establecido un plan de incentivos para sus\s
+                vendedores. Al final del período, a cada departamento se le pide el importe global de las\s
+                ventas. A los departamentos que excedan el 33% de las ventas totales se les adiciona al\s
+                salario de los vendedores un porcentaje equivalente al 20% del salario mensual.
+                """);
+        double ventasDepartamento1, ventasDepartamento2, ventasDepartamento3, totalVentas;
+        double salario, porcentajeVentas, salarioDepartamento1, salarioDepartamento2, salarioDepartamento3;
+        Scanner entrada = new Scanner(System.in);
 
-	}
+        System.out.println("Ingrese ventas del departamento 1: ");
+        ventasDepartamento1 = entrada.nextDouble();
+        System.out.println("Ingrese ventas del departamento 2: ");
+        ventasDepartamento2 = entrada.nextDouble();
+        System.out.println("Ingrese ventas del departamento 3: ");
+        ventasDepartamento3 = entrada.nextDouble();
+        System.out.println("Ingrese el salario de los vendedores: ");
+        salario = entrada.nextDouble();
+
+        totalVentas = ventasDepartamento1 + ventasDepartamento2 + ventasDepartamento3;
+        porcentajeVentas = 0.33 * totalVentas;
+
+		/*
+		 * Se comprueba cuál fue el departamento con mayor porcentaje de ventas y se le da una
+		 * bonificación del 20% en su salario
+		 */
+        if (ventasDepartamento1 > porcentajeVentas) {
+            salarioDepartamento1 = salario + 0.2 * salario;
+        }
+		else {
+            salarioDepartamento1 = salario;
+        }
+        if (ventasDepartamento2 > porcentajeVentas) {
+            salarioDepartamento2 = salario + 0.2 * salario;
+        }
+		else {
+            salarioDepartamento2 = salario;
+        }
+        if (ventasDepartamento3 > porcentajeVentas) {
+            salarioDepartamento3 = salario + 0.2 * salario;
+        }
+		else {
+            salarioDepartamento3 = salario;
+        }
+        System.out.println("El salario para los vendedores del departamento 1 es: $" + salarioDepartamento1);
+        System.out.println("El salario para los vendedores del departamento 2 es: $" + salarioDepartamento2);
+        System.out.println("El salario para los vendedores del departamento 3 es: $" + salarioDepartamento3);
+    }
 }
