@@ -9,3 +9,6 @@
 
 ### Docente:
 Walter Hugo Arboleda Mazo
+
+### Grupo:
+3 (remota)
