@@ -1,4 +1,4 @@
-### Sobre el diagrama de clases ... (realizado en StarUML):
+Sobre el diagrama de clases ... (realizado en StarUML):
 
 Lo primero que se hace es definir una clase para cada una de las seis figuras geométricas propuestas en el enunciado, las cuales son llamadas como 
 Trapecio, Rectangulo, TrianguloRectangulo, Rombo, Cuadrado y Circulo (son las palabras que se ven en negrilla en la imagen), las cuales a su vez 
