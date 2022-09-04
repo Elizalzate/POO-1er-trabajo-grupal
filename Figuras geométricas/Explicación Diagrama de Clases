@@ -1,10 +1,20 @@
-Lo primero que se hace es definir una clase para cada una de las seis figuras geométricas propuestas en el enunciado, las cuales son llamadas como Trapecio, Rectangulo, TrianguloRectangulo, Rombo, Cuadrado y Circulo (son las palabras que se ven en negrilla en la imagen), las cuales a su vez son compuesta de atributos y métodos. Los primeros son características que permiten diferenciar una figura de otra, que se guardan en variables denominadas instancias y corresponden a:
+### Sobre el diagrama de clases ... (realizado en StarUML):
+
+Lo primero que se hace es definir una clase para cada una de las seis figuras geométricas propuestas en el enunciado, las cuales son llamadas como 
+Trapecio, Rectangulo, TrianguloRectangulo, Rombo, Cuadrado y Circulo (son las palabras que se ven en negrilla en la imagen), las cuales a su vez 
+son compuesta de atributos y métodos. Los primeros son características que permiten diferenciar una figura de otra, que se guardan en variables 
+denominadas instancias y corresponden a:
 	El Trapecio tiene altura, base mayor y base menor (las tres de tipo int).
 	El Rectangulo tiene base y altura como atributos (ambas de tipo int).
 	El TrianguloRctangulo tiene base y altura (de tipo int ambos atributos).
 	El Rombo requiere de la longitud de los lados, diámetro mayor y diámetro menor (las tres de tipo int).
 	El Cuadrado tiene la longitud de los lados como atributo (de tipo int).
 	El Circulo requiere que se ingrese el radio (de tipo int).
-Nota: Es importante mencionar que, en el caso del TrianguloRectangulo, la hipotenusa no es considerada un atributo porque tal como logra evidenciarse en la codificación, esta es calculada mediante la fórmula de “Math.pow(base*base+altura*altura,0.5”
-Los segundos, corresponden a aquellas operaciones que permiten definir la clase principal con sus parámetros necesarios (todos siendo de tipo int para las figuras trabajadas), el cálculo del área y el cálculo del perímetro, donde estas últimas dos devuelven resultados de tipo double. Sin embargo, el TrianguloRectangulo cuenta con dos métodos extras que son para calcular el valor de la hipotenusa y para determinar qué tipo de triángulo es la figura teniendo en cuenta el valor del lado (que es un atributo).
-Luego de todo lo anterior, se define una clase central (PruebaFiguras) que sirve para poder indicar que todas las demás clases están en un único método principal estático (main) que funciona como punto de entrada para la ejecución del programa sobre figuras geométricas. 
+Nota: Es importante mencionar que, en el caso del TrianguloRectangulo, la hipotenusa no es considerada un atributo porque tal como logra evidenciarse 
+en la codificación, esta es calculada mediante la fórmula de “Math.pow(base*base+altura*altura,0.5)”
+Los segundos, corresponden a aquellas operaciones que permiten definir la clase principal con sus parámetros necesarios (todos siendo de tipo int para
+las figuras trabajadas), el cálculo del área y el cálculo del perímetro, donde estas últimas dos devuelven resultados de tipo double. Sin embargo, el 
+TrianguloRectangulo cuenta con dos métodos extras que son para calcular el valor de la hipotenusa y para determinar qué tipo de triángulo es la figura 
+teniendo en cuenta el valor del lado (que es un atributo).
+Luego de todo lo anterior, se define una clase central (PruebaFiguras) que sirve para poder indicar que todas las demás clases están en un único método 
+principal estático (main) que funciona como punto de entrada para la ejecución del programa sobre figuras geométricas. 
